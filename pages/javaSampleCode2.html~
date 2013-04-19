@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <title> Calculator in Java </title>
+    </head> 
+    
+    <body>
+        <h1> A more Complex example, a Calculator </h1>
+        <hr><br>
+
+			No code, exactly, for layout reason, I prefer to not put it here, you can find it in the examples directory. <br>
+			Note that the same example will be also proposed in Python later. <br>
+			The code is also very easy to understand. <br>
+
+			<h3> Problem Analisys </h3>
+			<ul>
+				<li> Being this just a demo project, I prefer to maintain it as simple as possible. </li>
+				<li> As you can see from the screenshot, we will use just two operators. </li>
+				<li> We will support just the four basic operation. </li>
+				<li> The user will eirte into two text-input widget, and click on a button to choose an operator. </li>
+				<li> To commit the operation the user will click on the "=" button. </li>
+			</ul>			
+
+			<h3> Screenshoots </h3>
+			<img src="../res/imgs/calcJava.png" 
+				 alt="A screenshot of the result."
+			     width=20% > 
+			<img src="../res/imgs/calcJava_structure.png" 
+				 alt="A screenshot of the result."
+			     width=20% > 
+			<img src="../res/imgs/calcJava_layout.png" 
+			 	 alt="A screenshot of the result."
+			     width=20% > 
+        </div>
+
+        <hr>
+        <table class="footer">
+            <tr>
+                <td>
+                    <a href="../index.html"> Index </a>
+                </td>
+                <td>
+                    <a href="javaSampleCode.html"> Prev </a>
+                </td>
+                <td>
+                    <a href="compilation.html"> Next </a>
+                </td>
+            </tr>
+        </table>
+    </body>
+<html>

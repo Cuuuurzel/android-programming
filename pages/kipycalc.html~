@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <title> KiPyCalc </title>
+    </head> 
+    
+    <body>
+        <h1> A More Complex Example </h1>
+        <h2> KiPyCalc </h2>
+        <hr><br>
+         
+        <div class="content">   
+        </div>
+
+        <hr>
+        <table class="footer">
+            <tr>
+                <td>
+                    <a href="../index.html"> Index </a>
+                </td>
+                <td>
+                    <a href="javaVsPython2.html"> Prev </a>
+                </td>
+            </tr>
+        </table>
+    </body>
+<html>

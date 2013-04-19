@@ -1,0 +1,36 @@
+a {
+	text-decoration : none;
+}
+
+body {
+    font : 14px Helvetica;    
+}
+
+td {
+    font : 14px Helvetica;    
+}
+
+.code {
+	font : 13px Courier;
+}
+
+.center {
+    text-align : center;
+} 
+
+.left {
+    text-align : left;
+} 
+
+.strong {
+    font : bold 16px Helvetica;
+} 
+
+.small {
+    font : 12px Helvetica;
+} 
+
+.footer {
+    font : bold 25px Helvetica;
+    text-align : center;
+} 

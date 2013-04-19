@@ -1,0 +1,32 @@
+a {
+	text-decoration : none;
+}
+
+.code {
+	font : 13px Courier;
+}
+
+.center {
+    text-align : center;
+} 
+
+.left {
+    text-align : left;
+} 
+
+.strong {
+    font : bold 16px Helvetica;
+} 
+
+body {
+    font : 14px Helvetica;    
+}
+
+.small {
+    font : 12px Helvetica;
+} 
+
+.footer {
+    font : bold 25px Helvetica;
+    text-align : center;
+} 

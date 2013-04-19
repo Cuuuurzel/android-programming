@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <title> Android </title>
+    </head> 
+    
+    <body>
+        <h1>Android</h1>
+        <hr><br>
+         
+        <div class="content">        
+        	<h2>Life, Death and Miracles</h2>
+			Android is a linux-based Operative System born in 2003, based on the concept of stack-software. <br>
+			Android target platform is ARM ( there is also an x86 implementation ). <br>
+			It was initially developed by Android Inc., founded by Google and later bought in 2005, and <br>
+			unveiled in 2007 along with the founding of the Open Handset Alliance ( a consortium of hardware, software and telecomunication, companies ). <br>
+			<br>
+	        <h2>Internal Structure</h2>
+            <table>
+	            <tr>
+                    <td width=40%>
+                        <img src="../res/imgs/android_architecture.png" 
+                             alt="Android Architecture"
+                             width=100% >       
+                    </td>
+                    <td width=60%>
+					    <table class="content">
+						    <tr>								
+								<td>
+									<div class="strong"> Linux Kernel </div> 
+									Android uses linux kernel. <br>
+									It provides basic features : <br>
+									<ul class="small">
+										<li> Hardware Abstraction Layer </li>
+										<li> C/C++ APIs. </li>
+										<li> GCC. </li>
+										<li> Memory and Processes Menagement ( at low-level ) </li>
+									</ul>
+								</td>
+								<td>
+								    <div class="strong"> Android Runtime </div> 
+									<div class="center"> 
+									    Android RT consist essentially of the Dalvik VM and core
+										<b> C and Java Libraries </div> 
+									</div>
+									<ul class="small">
+										<li> LibC </li>
+										<li> OpenGL ES </li>
+										<li> Webkit </li>
+										<li> SQLite </li>
+										<li> ... </li>
+									</ul>									
+								</td>
+							</tr>
+							<tr>
+								<td>	
+									<div class="strong"> Dalvik VM </div> 
+									The Dalvik Virtual Machine is for sure the core of the entire OS. <br>
+									It is comparable to the Scheduler of a "classic" OS. <br>
+									We'll talk about this in the next chapter. <br>
+								</td>
+								<td>	
+									<div class="strong"> Application Framework </div> 
+									This is an other important part of Android. <br>
+									It contains most of the libraries needed to develop application, such as the Window Manager, <br>
+									but also the Package Manager, and an interface to the telephone APIs.										
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+            </table>
+        </div>
+
+        <hr>
+        <table class="footer">
+            <tr>
+                <td>
+                    <a href="../index.html"> Index </a>
+                </td>
+                <td>
+                    <a href="../index.html"> Prev </a>
+                </td>
+                <td>
+                    <a href="javaAndArm.html"> Next </a>
+                </td>
+            </tr>
+        </table>
+    </body>
+<html>
