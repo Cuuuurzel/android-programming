@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+		<title> Python </title>
+		<h1> Python on Android </h1>
+		<hr>
+	</head> 
+	
+	<body>		
+		Python is a multi-paradigm programming language, initially developed by Guido Van Rossum, in 1989. <br>
+		In analogy with Java, is both compiled and interpreted, note that compilation could also come at runtime <br>
+		Python source files ( *.py ) are compiled in bytecode, which is executed by an interpreter. <br>
+		It is often used as a scripting language, but is also used in a wide range of non-scripting contexts. <br>
+		Using third-party tools it can also be packaged into standalone executables. <br>
+		<h3> In Pills </h3>
+		<ul>
+			<li> Emphasize the readability </li>
+			<li> Concise Syntax </li> 
+			<li> Multi-Paradigm </li>
+			<li> Duck Typing </li> 
+			<li> No modifier, but Decorators </li> 
+			<li> Completely Cross-Platform </li>  
+		</ul>
+
+		<h2> Python Implementation </h2>					
+		One of Python big problems is the efficiency. <br>
+		There are several implementation of Python which try to obviate to this problem.
+		<ul>
+			<li>
+				<b> PyPi </b>
+				Doesn't need an interpreter, because it is compiled.
+			</li>
+			<li>
+				<b> Jython </b>
+				Runs on the JVM. <br>
+				Almost as efficient as Java!
+			</li>
+			<li>
+				<b> IronPython </b>
+				Runs on .NET. <br>
+				Almost as efficient as C#!
+			</li>
+			<li>
+				<b> Cython </b>
+				Consist of a superset of Python with a foreign function interface for invoking C/C++ routines. <br>
+				Allows the developer to declare the static type of routine parameters, local variables, subroutine results, and class attributes. <br>
+				While Cython still be interpreted and not compiled, it is of paramount importance for the efficiency of Python libraries.
+			</li>
+		</ul>
+
+		<h2>SL4A</h2>
+		As mentioned, Python runs on an interpreter. <br>
+		This allows to develop multiplatform code, just like Java. <br>
+		The Scripting Layer for Android ( SL4A ) allows to run various script directly on Android devices. <br>
+		Supported languages includes Python, Perl, Ruby, Lua, JavaScript and so on... <br>
+		SL4A is designed for developers and is still alpha quality software.
+
+		<h2>Python for Android</h2>
+		Python for android is a project to create your own Python distribution. <br>
+		The software allows you to include all the modules you want and use them to compile and apk.
+		
+		<h2>Kivy</h2>
+		<table>
+			<tr>
+				<td>
+					<img src="../../res/imgs/kivy_architecture.png" 
+						 alt="The Kivy Framework Architecture"
+						 width=100% >
+				</td>
+				<td>
+					Kivy is a cross-platform Python framework for rapid development of application. <br>
+					Using python-for-android technology to create a python distribution that includes kivy <br>
+					allows you to run the same application code on any Android device. <br>
+					<b> All without modify a single line of code. </b> <br>
+					This is possible because the framework itself is written in pure python. 
+					<br>
+					As many other frameworks do, kivy provides a set of classes for building the GUI,<br>
+					but also to manage internal process and touch input. <br>
+					However, Kivy comes with a further kind of approach. <br>
+					Both GUI layout and widgets can be described using the Kv Language. <br>
+					This technology is cross between UIML ( Layout definition ) and XML ( Structure definition ).
+					The second approach makes kivy easily extensible.
+				</td>
+			</tr>
+		</table>
+		<hr>
+	</body>
+</html>

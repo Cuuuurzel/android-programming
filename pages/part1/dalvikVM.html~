@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../res/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../../res/css/main.css">
 		<title> Dalvik VM </title>
 		<h1> The Dalvik Virtual Machine </h1>
 		<hr>
@@ -16,7 +16,7 @@
 		<h2> What does the DVM? </h2>
 		<ul>
 			<li>
-				Executes ( of course ) Dalvik Bytecode. <br>
+				Executes Dalvik Bytecode. <br>
 			</li>
 			<li>
 				As there is no exceptions handling in Dalvik Bytecode, DVM handle them at runtime.						
@@ -37,7 +37,7 @@
 		<table>
 			<tr>
 				<td width=30%>
-					<img src="../res/imgs/dalvik_instance.png" 
+					<img src="../../res/imgs/dalvik_instance.png" 
 						 alt="Various Dalvik instance"
 						 width=100% >
 				</td>
@@ -125,19 +125,6 @@
         </ul>
 
         <hr>
-        <table class="footer">
-            <tr>
-                <td>
-                    <a href="../index.html"> Index </a>
-                </td>
-                <td>
-                    <a href="android.html"> Prev. </a>
-                </td>
-                <td>
-                    <a href="androidProgramming.html"> Next </a>
-                </td>
-            </tr>
-        </table>
     </body>
 <html>
 

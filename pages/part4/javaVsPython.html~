@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <title> Java vs Python </title>
+        <h1> Java and Python comparison </h1>
+		<hr>
+    </head> 
+    
+    <body>
+		<h2>Problem 1</h2>
+		Consider a function to traverse a data structure (a tree, for instance) to find objects that match certain criteria. <br>
+		The matching function is generic: It traverses the structure and calls a caller-supplied matching function to match two objects. <br>
+		It makes sense to have the tree class supply the matching logic (which hides the details of efficiently traversing the tree), <br>
+		while allowing the caller to specify the matching function. <br>
+		<br>
+		<table>
+			<tr>
+				<td>
+<pre class="code">
+//Java implementation, using an interface.
+import java.util.Collection;
+import java.util.ArrayList;
+
+public interface Matcher<T> {
+    boolean matches(T o);
+}
+
+public class MyTree<T> {
+    // details omitted
+
+    Collection<T> matches(Matcher matcher) {
+        Collection<T> result = new ArrayList<T>();
+
+        for ( element : this.treeElements ) {
+            if ( matcher.matches(element) ) { 
+                result.add(element);
+            }
+        }
+        return result;
+    }
+}
+
+MyTree<String> keywords = new MyTree<String>();
+
+//get all keywords starting with 'a'.
+Collection<String> matches = keywords.matches (
+    new Matcher<String>() {
+        public boolean matches( String s ) {
+            return s.startsWith("a");
+        }
+    }
+);
+</pre>
+				</td>
+				<td>
+<pre class="code">
+#Same thing in Python
+class MyTree() :
+
+    # details omitted
+
+    def matches( self, matches ):
+        return [el for el in self.__tree_elements if matches(el)]
+
+keywords = MyTree()
+
+# Code that fills the tree goes here
+# Now, get all keywords starting with 'a'.
+matches = keywords.matches( lambda el: el.startswith('a') )
+</pre>
+				</td>
+			</tr>
+		</table>
+        <hr>
+    </body>
+<html>

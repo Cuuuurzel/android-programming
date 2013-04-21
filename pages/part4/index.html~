@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+        <title> Part IV </title>
+        <h1>Part IV - Python as an alternative to Java</h1>
+        <hr>
+    </head> 
+    
+    <body>
+
+		<ul>
+			<li>
+				<a href="pythonOnAndroid.html">Python on Android</a>
+			</li>
+			<li>
+				<a href="javaVsPython.html">Languages comparison</a>
+			</li>
+			<li>
+				<a href="pythonSampleCode.html">"Hello World" using Python-Kivy</a>
+			</li>
+			<li>
+				<a href="javaVsPython2.html">Languages comparison</a>
+			</li>
+		</ul>
+	</body>
+</html>

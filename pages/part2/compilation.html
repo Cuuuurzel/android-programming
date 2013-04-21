@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+        <title> Compilation </title>
+        <h1> Compile an Application </h1>
+        <hr>
+		<br>
+    </head> 
+    
+    <body>         
+    
+		<h2> Introduction </h2>
+		Compile a programm means translate it from a language to an other. <br>
+		For example from C to x86 assembly, or from Java to Java Bytecode. <br>
+		When compiling an application of Android, our target-language is the Dalvik Bytecode.
+		I won't talk about the compilation itself between any language to Dalvik Bytecode, or from bytecode to ARM Assembly.
+
+		<h2> From any language to Dalvik Bytecode </h2>
+		<table>
+			<tr>
+				<td>				
+					It can't be easier. <br>
+					
+					<h3>Structure of a DEX file</h3>
+					<ul>
+						<li>
+							<b>Header</b>
+						</li>
+						<li>
+							<b>Constant Pool</b>
+							<ul>
+								<li> References to other classes </li>
+								<li> Method names </li>
+								<li> Numerical constants </li>	
+							</ul>
+						</li>
+						<li>
+							<b>Classes definition</b>
+							<ul>
+								<li> Access flags </li>
+								<li> Class names </li>
+							</ul>
+						</li>
+						<li>
+							<b>Data</b>
+							<ul>
+								<li> Method code </li>
+								<li> Info related to methods </li>
+								<li> Variables </li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+				<td width=40%>
+					<img src="../../res/imgs/dalvik_bytecode.png" 
+						 alt="Java to Dalvik Bytecode mapping"
+						 width=100% > 
+				</td>
+			</tr>
+		</table>
+
+		<h2> Building an APK file </h2>
+		Application Package File (APK) is the file format used to distribute and install application on Android. <br>
+		Any program, to run on Android, needs to be packed in one .apk file. <br>
+		The apk files contains the application code, the dex file, and all the resource needed.<br>
+		APK files are ZIP file formatted packages based on the JAR file format, with .apk file extensions.<br>
+		The MIME type associated with APK files is application/vnd.android.package-archive. <br>
+		The application can be compiled using the ADT plugin. <br>
+		After this, the apk needs to be signed, using Jarsigner, and the aligned, using Zipalign.
+
+		<h2> Runtime through the Dalvik Virtual Machine </h2>
+		<table>
+			<tr>
+				<td width=50%>
+					<img src="../../res/imgs/dvm_working.png" 
+						 alt="DVM working concept"
+						 width=100% > 
+				</td>
+				<td>
+					A compiled program is loaded by the DVM and unpacked. <br>
+					Application memory is divided in various sections ( like the 8086 segments ).
+					<ul>
+						<li>
+							Stack Section
+						</li>
+						<li>
+							BSS Section <br>
+							( Which is something derivated from Unix Compilers ).
+						</li>
+						<li>
+							Data Section
+						</li>
+						<li>
+							Text Section
+						</li>
+					</ul>
+				</td>
+			</tr>	
+		</table>
+        <hr>
+    </body>
+<html>
