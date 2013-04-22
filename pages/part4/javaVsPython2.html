@@ -7,6 +7,97 @@
     </head> 
     
     <body>
+		<h3> Android SDK usage in Python </h3>
+		If the SDK (and the NDK too) is written in Java, how is possible to use classes there declared? <br>
+
+		<h3> Table of concepts </h3>
+		<table width=100% border=1>
+			<tr>
+				<td><h3> How do you... </h3></td>
+				<td><h3> Java </h3></td>
+				<td><h3> Python </h3></td>
+			</tr>
+
+			<tr>
+				<td> ...define a job for the DVM? </td> 
+				<td> Using the <b>Activity</b> class. </td>
+				<td> 
+					Using the <b>App</b> class.
+					<ul>
+						<li>onCreate(Bundle) -> build() </li>
+						<li>onPause(Bundle) -> on_pause() </li>
+						<li>and so on... </li>
+					</ul>					
+				</td>
+			</tr>
+
+			<tr>
+				<td> ...interact with an other application?</td>
+				<td> Using a <b>Bundle</b> object. </td>
+				<td> Actually, there is no way of doing this. </td>
+			</tr>
+
+			<tr>
+				<td> ...handle touch events?</td>
+				<td> <b>Overriding</b> the onTouchEvent method. </td>
+				<td> 
+					<b>Overriding</b> respectively :
+					<ul>
+						<li>on_touch_down</li>
+						<li>on_touch_move</li>
+						<li>on_touch_up</li>
+					</ul>
+					You also can grab a certain touch to a Widget.
+				</td>
+			</tr>
+
+			<tr>
+				<td> ...handle multi-touch events?</td>
+				<td colspan=2> 
+					Using the touch-event unique <b>id</b>.
+				</td>
+			</tr>
+
+			<tr>
+				<td> ...make 2D drawing?</td>
+				<td> 
+					You need to extend the View class and override <b>the onDraw(Canvas c)</b> method.
+				</td>
+				<td>
+					Every Widget object as a canvas property, which you can treat in different ways :
+					<ul>
+						<li>Using <b>Kv-Language</b>, expecially for static things, in comfortable a separeted file.</li>
+						<li>Using the Python <b>with</b> statement.</li>
+						<li>Or using it as a python variable (not so widely used).</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr>
+				<td> ...extend a widget?</td>
+				<td> By <b>extending</b> the Widget class and <b>overriding</b> the onDraw() method. </td>
+				<td> You have to extend a class, like in Java, then you will modify the canvas property as mentioned before. </td>
+			</tr>
+
+			<tr>
+				<td rowspan=2> ...make 3D drawing?</td>
+				<td colspan=2> 
+					Of course, you will need to pass through OpenGL ES, which APIs are provided by the Application Framework. <br>
+					In both languages however you will not have the same set of API you will have on a desktop app.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Just use the classes of the OpenGL package in the NDK. <br>
+					While it not differs a lot from JOGL or Java3D, you will have a different set of APIs. <br>
+				</td>
+				<td> 
+					Kivy have its own OpenGL wrapper, which offers common APIs on every platform. <br>
+					3D drawing is currently in a "beta" phase. <br>
+					However, it does not have the same set of API of PyOpenGL.
+				</td>
+			</tr>
+		</table>
         <hr>
     </body>
 <html>

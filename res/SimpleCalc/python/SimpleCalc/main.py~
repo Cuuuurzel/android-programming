@@ -23,18 +23,24 @@ class SimpleCalc( BoxLayout ) :
                                  size_hint=(1, 0.3), \
                                  font_size=28
                                ) 
+
 		#A container for the buttons
 		buttons = GridLayout( cols=4, size_hint=(1, 0.7) )
+
 		#Generating labels for the buttons
 		names = [ "+", "-", "*", "/" ] + list( range( 1, 10 ) )+["0", "."]
+
 		#Generating the buttons
 		names_to_buttons( names, self.update, buttons ) 
+
 		#A button to commit operations
 		btnCalc = Button( text="=", size_hint=(1, 0.15), font_size=24  ) 
 		btnCalc.bind( on_press=self.calc )
+
 		#A button to clear all
 		btnClear = Button( text="Clear", size_hint=(1, 0.15), font_size=24  ) 
 		btnClear.bind( on_press=self.clear )
+
 		#Adding all this widget to the main one
 		self.add_widget( self.lblDisplay )
 		self.add_widget( buttons )
@@ -47,20 +53,46 @@ class SimpleCalc( BoxLayout ) :
 	def clear( self, instance ) :
 		self.lblDisplay.text = ""
 
-	def calc( self, instance ) :
+	#Same approach used in the Java code
+	def calc_JAVA_LIKE( self, instance ) :
+		operands = []
+		labels = []
+		pattern = re.compile( "[+\\-*/]" )
+
+		for operand in pattern.split( self.lblDisplay.text ) :
+			operands.append( float(operand) )
+			labels.append( operand )
+		
 		result = 0
 		j = 0
-		for operand, label in [ ( float(n), n ) for n in re.compile("[+\\-*/]").split(self.lblDisplay.text) ] :
-			print( self.lblDisplay.text )
+		for i in range( 0, len( operands ) ) : 
+			operand = operands[i]
+			label = labels[i]
 			operator = self.lblDisplay.text[j]
 			j += len( label )
-			print( operand, j, operator )
-
 			if   operator == "*": result *= operand
 			elif operator == "-": result -= operand
 			elif operator == "/": result /= operand
 			else: result += operand
 		self.lblDisplay.text = str( result )
+
+	#Using list comprehension
+	def calc_LIST_COMPREHENSION( self, instance ) :	
+		pattern = re.compile("[+\\-*/]")
+		result = 0
+		j = 0
+		for operand, label in [ ( float(n), n ) for n in pattern.split(self.lblDisplay.text) ] :
+			operator = self.lblDisplay.text[j]
+			j += len( label )
+			if   operator == "*": result *= operand
+			elif operator == "-": result -= operand
+			elif operator == "/": result /= operand
+			else: result += operand
+		self.lblDisplay.text = str( result )
+
+	#Using eval
+	def calc( self, instance ) :
+		pass
 
 class SimpleCalcApp( App ) : 
 

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../res/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../../res/css/main.css">
 		<title> Python </title>
 		<h1> Python on Android </h1>
 		<hr>
@@ -22,32 +22,6 @@
 			<li> Completely Cross-Platform </li>  
 		</ul>
 
-		<h2> Python Implementation </h2>					
-		One of Python big problems is the efficiency. <br>
-		There are several implementation of Python which try to obviate to this problem.
-		<ul>
-			<li>
-				<b> PyPi </b>
-				Doesn't need an interpreter, because it is compiled.
-			</li>
-			<li>
-				<b> Jython </b>
-				Runs on the JVM. <br>
-				Almost as efficient as Java!
-			</li>
-			<li>
-				<b> IronPython </b>
-				Runs on .NET. <br>
-				Almost as efficient as C#!
-			</li>
-			<li>
-				<b> Cython </b>
-				Consist of a superset of Python with a foreign function interface for invoking C/C++ routines. <br>
-				Allows the developer to declare the static type of routine parameters, local variables, subroutine results, and class attributes. <br>
-				While Cython still be interpreted and not compiled, it is of paramount importance for the efficiency of Python libraries.
-			</li>
-		</ul>
-
 		<h2>SL4A</h2>
 		As mentioned, Python runs on an interpreter. <br>
 		This allows to develop multiplatform code, just like Java. <br>
@@ -63,7 +37,7 @@
 		<table>
 			<tr>
 				<td>
-					<img src="../res/imgs/kivy_architecture.png" 
+					<img src="../../res/imgs/kivy_architecture.png" 
 						 alt="The Kivy Framework Architecture"
 						 width=100% >
 				</td>

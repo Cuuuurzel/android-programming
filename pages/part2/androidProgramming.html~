@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
         <title> Android Programming </title>
         <h1> General lines about Android Programming </h1>
         <hr>
@@ -20,6 +20,12 @@
 		The NDK is a toolset that allows you to implement parts of your app using native-code languages ( C/C++ ). <br>
 		This can be helpful so you can reuse existing code libraries written in these languages. <br>
 		Most apps do not need the Android NDK.
+
+		<h2> Android Debug Bridge </h2>
+		The Android Debug Bridge (ADB) is a toolkit included in the Android SDK package. <br>
+		It consists of both client and server-side programs that communicate with one another. <br>
+		The ADB is typically accessed through the command-line interface. <br>
+		A typical use is to compile a source file and run it on a device connected via usb.
 
 		<h2> Project Sections </h2>
 		The project is composed of three main directory :
@@ -93,7 +99,7 @@ startActivityForResult(
 					</ul>
 				</td> 
 				<td width=50% > 
-					<img src="../res/imgs/activity_lifecycle.png" 
+					<img src="../../res/imgs/activity_lifecycle.png" 
 						 alt="Activity Lifecycle"
 		    		     width=100% > 
 				</td>

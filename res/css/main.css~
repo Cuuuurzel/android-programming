@@ -1,5 +1,14 @@
 a {
 	text-decoration : none;
+	color: "#000000";
+}
+
+body {
+    font : 14px Helvetica;    
+}
+
+td {
+    font : 14px Helvetica;    
 }
 
 .code {
@@ -17,10 +26,6 @@ a {
 .strong {
     font : bold 16px Helvetica;
 } 
-
-body {
-    font : 14px Helvetica;    
-}
 
 .small {
     font : 12px Helvetica;

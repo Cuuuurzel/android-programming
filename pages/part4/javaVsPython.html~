@@ -1,13 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
         <title> Java vs Python </title>
         <h1> Java and Python comparison </h1>
 		<hr>
     </head> 
     
     <body>
-		<h2>Problem 1</h2>
 		Consider a function to traverse a data structure (a tree, for instance) to find objects that match certain criteria. <br>
 		The matching function is generic: It traverses the structure and calls a caller-supplied matching function to match two objects. <br>
 		It makes sense to have the tree class supply the matching logic (which hides the details of efficiently traversing the tree), <br>

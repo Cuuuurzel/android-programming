@@ -10,49 +10,55 @@
 		<a href="pages/part1/index.html"> <h3>Part I - Android</h3> </a>
 		<ul>
 			<li>
-				<a href="pages/android.html">Introduction to Android</a>
+				<a href="pages/part1/android.html">Introduction to Android</a>
 			</li>
 			<li>
-				<a href="pages/dalvikVM.html">The Dalvik Virtual Machine</a>
-			</li>
-		</ul>
-
-		<a href="pages/part1/index.html"> <h3>Part II - Android Programming</h3> </a>
-		<ul>
-			<li>
-				<a href="pages/androidProgramming.html">General lines about Android Programming</a>
-			</li>
-			<li>
-				<a href="pages/compilation.html">Packing Application</a>
-			</li>
-			<li>
-				<a href="pages/sampleApp.html"> Sample Application in Java </a>
+				<a href="pages/part1/dalvikVM.html">The Dalvik Virtual Machine</a>
 			</li>
 		</ul>
 
-		<a href="pages/part1/index.html"> <h3>Part III - The role of Java</h3> </a>
+		<a href="pages/part2/index.html"> <h3>Part II - Android Programming</h3> </a>
 		<ul>
 			<li>
-				<a href="pages/javaAndArm.html">Java and ARM</a>
+				<a href="pages/part2/androidProgramming.html">General lines about Android Programming</a>
 			</li>
 			<li>
-				<a href="pages/javaSampleCode.html">A more complex example - Java</a>
+				<a href="pages/part2/compilation.html">Packing Application</a>
+			</li>
+			<li>
+				<a href="pages/part2/sampleApp.html"> Sample Application in Java </a>
 			</li>
 		</ul>
 
-		<a href="pages/part1/index.html"> <h3>Part IV - Python as an alternative to Java</h3> </a>
+		<a href="pages/part3/index.html"> <h3>Part III - The role of Java</h3> </a>
 		<ul>
 			<li>
-				<a href="pages/pythonOnAndroid.html">Python on Android</a>
+				<a href="pages/part3/javaAndArm.html">Java and ARM</a>
 			</li>
 			<li>
-				<a href="pages/javaVsPython.html">Languages comparison</a>
+				<a href="pages/part3/javaSampleCode.html">A more complex example - Java</a>
+			</li>
+		</ul>
+
+		<a href="pages/part4/index.html"> <h3>Part IV - Python as an alternative to Java</h3> </a>
+		<ul>
+			<li>
+				<a href="pages/part4/pythonOnAndroid.html">Python on Android</a>
 			</li>
 			<li>
-				<a href="pages/pythonSampleCode.html">"Hello World" using Python-Kivy</a>
+				<a href="pages/part4/javaVsPython.html">Languages comparison</a>
 			</li>
 			<li>
-				<a href="pages/javaVsPython2.html">Languages comparison</a>
+				<a href="pages/part4/javaVsPython2.html">Java vs Python in Android context</a>
+			</li>
+			<li>
+				<a href="pages/part4/pythonSampleCode.html">Sample Application using Python-Kivy</a>
+			</li>
+			<li>
+				<a href="pages/part4/kipycalc.html">When you'll need Python</a>
+			</li>
+			<li>
+				<a href="pages/part4/conclusion.html">Conclusion</a>
 			</li>
 		</ul>
 	</body>

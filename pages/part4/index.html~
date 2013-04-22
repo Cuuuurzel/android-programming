@@ -10,16 +10,22 @@
 
 		<ul>
 			<li>
-				<a href="pythonOnAndroid.html">Python on Android</a>
+				<a href="pythonOnAndroid.html"> <h2>Python on Android</h2> </a>
 			</li>
 			<li>
-				<a href="javaVsPython.html">Languages comparison</a>
+				<a href="javaVsPython.html"> <h2>Languages comparison</h2> </a>
 			</li>
 			<li>
-				<a href="pythonSampleCode.html">"Hello World" using Python-Kivy</a>
+				<a href="javaVsPython2.html"> <h2>Java vs Python in Android context</h2> </a>
 			</li>
 			<li>
-				<a href="javaVsPython2.html">Languages comparison</a>
+				<a href="pythonSampleCode.html"> <h2>Sample Application using Python-Kivy</h2> </a>
+			</li>
+			<li>
+				<a href="kipycalc.html"> <h2>When you'll need Python</h2> </a>
+			</li>
+			<li>
+				<a href="conclusion.html"> <h2>Conclusion</h2> </a>
 			</li>
 		</ul>
 	</body>
