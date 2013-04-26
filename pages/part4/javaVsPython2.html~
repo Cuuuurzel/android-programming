@@ -7,9 +7,27 @@
     </head> 
     
     <body>
-		<h3> Android SDK usage in Python </h3>
-		If the SDK (and the NDK too) is written in Java, how is possible to use classes there declared? <br>
+		<h3> Accessing Java classes in Python </h3>
+		Both the SDK and the NDK are written in Java and C++. <br>
+		The usage of Java classes in a Python program is allowed using Jython, a Python interpreter written in Java. <br>
+		An other option is using Pyjnius, which is what Python-For-Android does :
+<pre class="code">
+	from jnius import autoclass
 
+	Stack = autoclass('java.util.Stack')
+	stack = Stack()
+	stack.push('hello')
+	stack.push('world')
+
+	print stack.pop() # --> 'world'
+	print stack.pop() # --> 'hello'
+</pre>
+		Python-For-Android internally mix Cython, JNI (Java Native Interface) and Pyjnius. <br>
+		The cost in terms of efficiency is minimal, and provides a more flexible interface. <br>
+		<br>
+		While Pyjnius sounds to have no limitation, Kivy does not officially supports the whole SDK. <br>
+		Basic Hardware Interface such as GPS or Bluetooth API are currently not avaiable in Kivy. <br>
+		
 		<h3> Table of concepts </h3>
 		<table width=100% border=1>
 			<tr>
@@ -23,26 +41,6 @@
 				<td> Using the <b>Activity</b> class. </td>
 				<td> 
 					Using the <b>App</b> class.
-					<ul>
-						<li>onCreate(Bundle) -> build() </li>
-						<li>onPause(Bundle) -> on_pause() </li>
-						<li>and so on... </li>
-					</ul>					
-				</td>
-			</tr>
-
-			<tr>
-				<td> ...define a Widget? </td> 
-				<td> 
-					Using the <b>Widget</b> class.
-					<ul>
-						<li>onCreate(Bundle) -> build() </li>
-						<li>onPause(Bundle) -> on_pause() </li>
-						<li>and so on... </li>
-					</ul>					
-				</td>
-				<td> 
-					Using the <b>Widget</b> class.
 					<ul>
 						<li>onCreate(Bundle) -> build() </li>
 						<li>onPause(Bundle) -> on_pause() </li>

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
         <title> Compilation </title>
         <h1> Compile an Application </h1>
         <hr>
@@ -52,7 +52,7 @@
 					</ul>
 				</td>
 				<td width=40%>
-					<img src="../res/imgs/dalvik_bytecode.png" 
+					<img src="../../res/imgs/dalvik_bytecode.png" 
 						 alt="Java to Dalvik Bytecode mapping"
 						 width=100% > 
 				</td>
@@ -72,7 +72,7 @@
 		<table>
 			<tr>
 				<td width=50%>
-					<img src="../res/imgs/dvm_working.png" 
+					<img src="../../res/imgs/dvm_working.png" 
 						 alt="DVM working concept"
 						 width=100% > 
 				</td>
@@ -97,20 +97,6 @@
 				</td>
 			</tr>	
 		</table>
-		
         <hr>
-        <table class="footer">
-            <tr>
-                <td>
-                    <a href="../index.html"> Index </a>
-                </td>
-                <td>
-                    <a href="androidProgramming.html"> Prev </a>
-                </td>
-                <td>
-                    <a href="sampleApp.html"> Next </a>
-                </td>
-            </tr>
-        </table>
     </body>
 <html>

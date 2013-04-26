@@ -22,18 +22,18 @@
 			<li> Completely Cross-Platform </li>  
 		</ul>
 
-		<h2>SL4A</h2>
+		<h3>SL4A</h3>
 		As mentioned, Python runs on an interpreter. <br>
 		This allows to develop multiplatform code, just like Java. <br>
 		The Scripting Layer for Android ( SL4A ) allows to run various script directly on Android devices. <br>
 		Supported languages includes Python, Perl, Ruby, Lua, JavaScript and so on... <br>
 		SL4A is designed for developers and is still alpha quality software.
 
-		<h2>Python for Android</h2>
+		<h3>Python for Android</h3>
 		Python for android is a project to create your own Python distribution. <br>
 		The software allows you to include all the modules you want and use them to compile and apk.
 		
-		<h2>Kivy</h2>
+		<h3>Kivy</h3>
 		<table>
 			<tr>
 				<td>

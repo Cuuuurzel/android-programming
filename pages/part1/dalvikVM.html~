@@ -123,7 +123,6 @@
 				The larger code size involves only 1.07% extra real machine loads per VM instruction, which is negligible. 
             </li>
         </ul>
-
         <hr>
     </body>
 <html>

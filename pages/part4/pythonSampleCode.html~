@@ -7,27 +7,6 @@
     </head> 
     
     <body>
-		<table width=100% border=1>
-			<tr>
-				<td><h3> Java Concept </h3></td>
-				<td><h3> Analog in Python </h3></td>
-			</tr>
-			<tr>
-				<td> <b>Activity</b> </td>
-				<td> 
-					<b>App</b>
-					<ul>
-						<li>onCreate(Bundle) -> build() </li>
-						<li>onPause(Bundle) -> on_pause() </li>
-					</ul>					
-				</td>
-			</tr>
-			<tr>
-				<td> <b>Bundle</b> </td>
-				<td> Missing </td>
-			</tr>
-		</table>
-
 <pre class="code">
 # -*- coding: utf-8 -*-
 
@@ -42,7 +21,7 @@ class SimpleCalc( BoxLayout ) :
 
     def __init__( self, **kargs ) :
         BoxLayout.__init__( self, orientation="vertical" )
-		#For layout reason, I put this function in the bottom of the page!
+        #For layout reason, I put this function in the bottom of the page!
         self.build_window()
             
     def update( self, instance ) :
@@ -65,7 +44,18 @@ class SimpleCalcApp( App ) :
          return True
 </pre>
 
-		And here are the missing functions :
+		<h3> Screenshots </h3>
+		<img src="../../res/SimpleCalc/screenshots/python1.png" 
+			 alt="A screenshot of the result."
+   		     width=30% > 
+		<img src="../../res/SimpleCalc/screenshots/python2.png" 
+			 alt="A screenshot of the result."
+   		     width=30% > 
+		<img src="../../res/SimpleCalc/screenshots/python3.png" 
+			 alt="A screenshot of the result."
+  		     width=30% > 
+
+		<h3>And here are the missing functions </h3>
 <pre class="code">
 #Build a set of bottons and add them to the given layout.
 def names_to_buttons( names, op, targetLayout ) : 
@@ -105,21 +95,6 @@ def build_window( self ) :
     self.add_widget( buttons )
     self.add_widget( btnCalc )
     self.add_widget( btnClear )
-
-if __name__ in [ "__android__", "__main__" ] :
-    SimpleCalcApp().run()
-</pre>  
-
-		<h2> Screenshots </h2>
-		<img src="../../res/SimpleCalc/screenshots/python1.png" 
-			 alt="A screenshot of the result."
-   		     width=30% > 
-		<img src="../../res/SimpleCalc/screenshots/python2.png" 
-			 alt="A screenshot of the result."
-   		     width=30% > 
-		<img src="../../res/SimpleCalc/screenshots/python3.png" 
-			 alt="A screenshot of the result."
-  		     width=30% > 
-        <hr>
+</pre>
     </body>
 <html>

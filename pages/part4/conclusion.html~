@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+        <title> Conclusion </title>
+        <h1> Conclusion </h1>
+		<hr>
+    </head> 
+    
+    <body>		
+		<h3>Summary Table</h3>
+		<table width=100% border=1>
+			<tr>
+				<td width=20%> <h3>Parameter</h3> </td>
+				<td width=40%> <h3>Java</h3> </td> 
+				<td width=40%> <h3>Python</h3> </td>
+			</tr>
+
+			<tr>
+				<td> Startup time </td>
+				<td> Irrilevant. </td>
+				<td> 
+					It depends from the content of the Python distribution. <br>
+					Heavy libraries, such as sympy, could take time for be unpacked!
+				</td>
+			</tr>
+
+			<tr>
+				<td> Efficiency </td>
+				<td colspan=2>
+					Both the languages are compiled in Dalvik Bytecode. <br>
+					The question then becomes delicate. <br>
+					As Java is the "official language" for Android programming, it suppose to be more efficient. <br>
+				</td>
+			</tr>
+
+			<tr>
+				<td rowspan=2> Hardware acceleration </td>
+				<td colspan=2>
+					<ul>
+						<li>Android 1.0 - OpenGL ES 1.0 support.</li>
+						<li>Android 2.2 - OpenGL ES 2.0 support.</li>
+						<li>Android 3.0 - Hardware-Accelerated 2D drawing.</li>
+						<li>Android 4.1 - Project Butter (Hardware Acceleration and Triple-Buffer for the GUI)</li>
+					</ul>					
+				</td>
+			</tr>
+			<tr>
+				<td>Native support through the Android SDK.</td>
+				<td>Support through pyjnius and Kiby wrappers.</td>
+			</tr>
+
+			<tr>
+				<td> Source compability </td>
+				<td> In a certain range of Android API levels. </td>
+				<td> 
+					Without changing a single line of code :
+					<ul>
+						<li>Android 2.3 and newer</li>
+						<li>Window Vista and newer</li>
+						<li>Mac OS X</li>
+						<li>Various Linux distributions</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr>
+				<td> Support </td>
+				<td>
+					Java is a de-facto standar of development, both for desktop and mobile application. <br>
+					Almost everything a programmer needs has yet be done. 
+				</td>
+				<td> 
+					Kivy is yet stable but begins just in these days to be used. <br>
+					That means there is a poor support for most things. 
+				</td>
+			</tr>
+		</table>
+    </body>
+<html>

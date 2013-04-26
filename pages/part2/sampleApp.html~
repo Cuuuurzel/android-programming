@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../res/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
         <title> Sample Application </title>
         <h1> A sample Application </h1>
         <hr>
@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 </pre>
 				</td>
 				<td width=20%>
-					<img src="../res/imgs/helloJava.png" 
+					<img src="../../res/imgs/helloJava.png" 
 						 alt="A screenshot of the result."
 		    		     width=100% > 
 				</td>
@@ -54,18 +54,5 @@ Bundle extras = intent.getExtras();
 Object someValues = extras.get( "myKey" );
 </pre>
         <hr>
-        <table class="footer">
-            <tr>
-                <td>
-                    <a href="../index.html"> Index </a>
-                </td>
-                <td>
-                    <a href="compilation.html"> Prev </a>
-                </td>
-                <td>
-                    <a href="javaSampleCode.html"> Next </a>
-                </td>
-            </tr>
-        </table>
     </body>
 <html>
