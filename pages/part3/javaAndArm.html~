@@ -17,7 +17,7 @@
 
 		<h3> Jazelle </h3>
 		Jazelle DBX (Direct Bytecode eXecution) allows some ARM processors to natively execute Java bytecode. <br>
-		The first idea is to facilitate the execution on Java ME programs on mobile device.	<br>
+		The target of this tecnology is to facilitate the execution on Java ME programs on mobile devices. <br>
 		The BXJ ( Branch and eXchange to Java ) instruction attempts to switch to Jazelle state. <br>
 		If allowed and successful, sets the 'J' bit in the CPSR; otherwise, it "falls through" and acts as a standard BX (Branch) instruction. <br>
 
@@ -101,6 +101,5 @@
 		</ul>
 
 		<h3> Kernel Linux 3.7 included pathes to support AArch64e. </h3>
-		<hr>
 	</body>
 </html>

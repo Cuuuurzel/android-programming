@@ -7,16 +7,16 @@
 	</head>
 	
 	<body>
-		<h2> Introduction </h2>
-		Every OS on the Earth needs to offer a set of APIs common on every platform. <br>
+		<h3> Introduction </h3>
+		An OS offers a set of common APIs on every platform on which the system runs. <br>
 		That allows to run the same kind of executable file on different platform, or OS version. <br>
-		This is possible in lots of ways, such as cross-compiling the source, or execute it on a Virtual Machine. <br>
-		In Android, all the software is executed on the Dalvik Virtual Machine. 
+		This is possible in a lot of ways, such as cross-compiling the source, or execute it on a Virtual Machine. <br>
+		In Android, users application are executed on the Dalvik Virtual Machine. 
 
-		<h2> What does the DVM? </h2>
+		<h3> What does the DVM? </h3>
 		<ul>
 			<li>
-				Executes Dalvik Bytecode. <br>
+				Executes Dalvik Bytecode.
 			</li>
 			<li>
 				As there is no exceptions handling in Dalvik Bytecode, DVM handle them at runtime.						
@@ -25,15 +25,15 @@
 				Manages multiple instance of itself ( Like the JVM does. )
 			</li>
 			<li>
-				Provides a "sandbox" where applications can run *without* interact each other. <br>
+				Provides a "sandbox" where applications can run *without* interact each other.
 			</li>
 			<li>
-				Abstracts the problem of memory menagement to the OS. <br>
+				Abstracts the problem of memory menagement to the OS.
 			</li>
 		</ul>
 		<b> We can talk about the Dalvik VM as an "Application-Level" Scheduler. </b>
 
-		<h2> Make it efficient </h2>
+		<h3> Make it efficient </h3>
 		<table>
 			<tr>
 				<td width=30%>
@@ -42,11 +42,11 @@
 						 width=100% >
 				</td>
 				<td>
-					As mentioned, for every application there is a single instance of the Dalvik Virtual Machine. <br>
+					As mentioned, every application runs on a single instance of the Dalvik Virtual Machine. <br>
 					Zygote is the process that make the creation of new DVM instace efficient.
 					<ol>
 						<li> 
-							Boot-loader load kernel and start init process.
+							The Boot-loader loads the kernel and start init process.
 						</li>
 						<li> 
 							Starts Zygote process.
@@ -55,25 +55,25 @@
 							Initializes a Dalvik VM which preloads and pre-initializes core library classes.
 						</li>
 						<li> 
-							Keep in an idle state by system and wait for socket requests.
+							The system keeps in an idle state the process until the execution request.
 						</li>
 						<li> 
-							Once an application execution request occur, Zygote forks itself and create new process with pre-loaded Dalvik VM.
+							Once an application execution request occurs, Zygote forks itself and create new process with the pre-loaded Dalvik VM.
 						</li>
 					</ol>
 				</td>
 			</tr>
 		</table>
 
-		<h2> Not a JVM </h2>
+		<h3> Not a JVM clone </h3>
 		<ul>
 			<li>
-				<b> The architecture is Register-Based ( instead of Stack-Based, like the JVM ). </b>
+				<b> The architecture is Register-Based ( instead of Stack-Based, like the JVM ). </b> <br>
 				Up to 2^16 avaiable registers.
 			</li>
 			<br>
 			<li>
-				<b> DVM uses the Dalvik Bytecode, and not, as many people may think, the Java one. </b>
+				<b> DVM uses the Dalvik Bytecode, and not, as many people may think, the Java one. </b> <br>
 				Which is far more pragmatic :
 				<table>
 					<tr>
@@ -92,18 +92,18 @@
 						</td>
 					</tr>
 				</table>
-				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ).
+				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ). <br>
 				Its use reduces by 30% fewer instructions, but 25% larger code size (bytes) compared to JVM.
 			</li>
 			<br>
 			<li>
-				<b> Constant Pool </b>
+				<b> Constant Pool </b> <br>
 				The dx compiler significantly reduces the size of the costant pool, by inling them directly in the bytecode. <br>
-				This permits the use of one single costant pool, instead of many, as the JVM does. <br>
+				This permits the use of one single costant pool, unlike the JVM does. <br>
 			</li>
 			<br>
 			<li>
-				<b> It comes without exceptions handling. </b>
+				<b> It comes without exceptions handling. </b> <br>
 			</li>
 			<br>
 			<li>
@@ -112,13 +112,13 @@
 			</li>
 			<br>
 			<li>
-				<b> Ambiguos primitive types </b>
+				<b> Ambiguos primitive types </b> <br>
 				The JVM is strongly typed, and uses different opcodes for every data-type. <br>
 				DVM does not distinguish between int/float/null, it uses aget ( and aget-wide for double and long ). 
 			</li>
 			<br>
 			<li>
-				<b> DVM is far more efficient. </b>
+				<b> DVM is far more efficient. </b> <br>
 				A Register-Based architecture is up to 47% more efficient than a Stack-Based one! <br>
 				The larger code size involves only 1.07% extra real machine loads per VM instruction, which is negligible. 
             </li>

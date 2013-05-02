@@ -48,7 +48,7 @@ Intent( getApplicationContext(), SecondActivity.class );
 intent.putExtra( "myKey", someValues );  
 startActivity( intent );
 </pre>
-		Then, in the sencod activity, you can sue the bundle just like an HashMap.
+		Then, in the second activity, you can use the bundle just like an HashMap.
 <pre class="code">
 Bundle extras = intent.getExtras(); 
 Object someValues = extras.get( "myKey" );

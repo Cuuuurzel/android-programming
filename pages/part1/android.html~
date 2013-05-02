@@ -7,13 +7,54 @@
 	</head> 
 	
 	<body>
-	   	<h2>Life, Death and Miracles</h2>
-		Android is a linux-based Operative System born in 2003, based on the concept of stack-software. <br>
-		Android target platform is ARM ( there is also an x86 implementation ). <br>
-		It was initially developed by Android Inc., founded by Google and later bought in 2005, and <br>
-		unveiled in 2007 along with the founding of the Open Handset Alliance ( a consortium of hardware, software and telecomunication, companies ). <br>
+		<h3>Introduction</h3>
+		Android is a Linux-Based OS which target-platform are mobile devices. <br>
+		Nowaday, over the 60% of smartphones in the world are running Android. <br>
+		It is Open Source, it has a good SDK, and it is Linux, this made developers quickly start to love Android. <br>
+		Android is under ongoing development by Google, which also provides the Android SDK. <br>
+		Each Android version corresponds to a specific API level, more API levels might be compatible each other.		
+
+	   	<h3>Life, Death and Miracles</h3>
+		<table width=100% border=1>
+			<tr>
+				<td width=20%><b>When</b></td>
+				<td width=80%><b>What</b></td>
+			</tr>
+			<tr>
+				<td>2003</td>
+				<td>Android development starts.</td>
+			</tr>
+			<tr>
+				<td>2005</td>
+				<td>Google buys Android Inc.</td>
+			</tr>
+			<tr>
+				<td>oct 2008</td>
+				<td>HTC Dream is the first Android phone to be commerced.</td>
+			</tr>
+			<tr>
+				<td>apr 2009</td>
+				<td>Android 1.5 "Cupcake" released, based on Kernel Linux 2.6.</td>
+			</tr>
+			<tr>
+				<td>oct 2011</td>
+				<td>Android 4.0 "Ice Cream Sandwich" released, based on Kernel Linux 3.0.</td>
+			</tr>
+			<tr>
+				<td>q1 2012</td>
+				<td>More than 800.000 Apps on the Play Store.</td>
+			</tr>
+			<tr>
+				<td>q3 2012</td>
+				<td>1.5 Million new device activation per day.</td>
+			</tr>
+			<tr>
+				<td>q1 2013</td>
+				<td>Over 600 Million total activation.</td>
+			</tr>
+		</table>
 	
-		<h2>Internal Structure</h2>
+		<h3>Internal Structure</h3>
 		<table>
 			<tr>
 				<td width=40%>
@@ -26,7 +67,7 @@
 						<tr>								
 							<td>
 								<h4> Linux Kernel </h4> 
-								Android uses the linux kernel (v2.6).
+								The Linux Kernel provides basic functions to Android :
 								<ul class="small">
 									<li> Hardware Abstraction Layer </li>
 									<li> C/C++ APIs. </li>
@@ -50,7 +91,7 @@
 						<tr>
 							<td>	
 								<h4>Dalvik Virtual Machine</h4>
-								I devoted an entire charapter (the next one) to IT.
+								See the following charapter for this.
 							</td>
 							<td>	
 								<h4> Application Framework </h4> 
@@ -66,12 +107,5 @@
 				</td>
 			</tr>
 		</table>
-
-		<h2> Resource Management </h2>
-		One of the most important task which an OS takes care si the resource management. <br>
-		The target is to assign resources to the processes, as efficiently and as quickly as possible. <br>
-		Trying to prevent, of course, the formation on stalls. <br>
-		In Android, this job is assigned, in a simple way, to the Linux Kernel. <br>
-		<hr>
 	</body>
 <html>

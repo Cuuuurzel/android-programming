@@ -7,32 +7,31 @@
     </head> 
     
     <body>
-		<h2> Android SDK </h2>
+		<h3> Android SDK </h3>
 		The Android software development kit (SDK) includes a comprehensive set of development tools.<br>
 		These include a debugger, libraries, a handset emulator based on QEMU, documentation, sample code, and tutorials.<br>
 		Enhancements to Android's SDK go hand in hand with the overall Android platform development. <br>
 		Each Android Version has a specific set of API, named "API level". <br>
-		The sdk supports all the Android version, previous installation of the corresponding API Level. <br>
-		Android applications are packaged in .apk format and stored under /data/app folder on the Android OS. <br>
+		Android applications are packaged in .apk format and stored int the /data/app folder on the Android OS. <br>
 		APK package contains .dex files ( executable for the dvm ), resource files, etc. <br>
 
-		<h2> Android NDK </h2>
+		<h3> Android NDK </h3>
 		The NDK is a toolset that allows you to implement parts of your app using native-code languages ( C/C++ ). <br>
-		This can be helpful so you can reuse existing code libraries written in these languages. <br>
+		This can be helpful in reusing existing code libraries written in these languages. <br>
 		Most apps do not need the Android NDK.
 
-		<h2> Android Debug Bridge </h2>
+		<h3> Android Debug Bridge </h3>
 		The Android Debug Bridge (ADB) is a toolkit included in the Android SDK package. <br>
-		It consists of both client and server-side programs that communicate with one another. <br>
+		It consists of both client and server-side programs that communicate each other. <br>
 		The ADB is typically accessed through the command-line interface. <br>
-		A typical use is to compile a source file and run it on physical device, without the use of the android emulator. 
+		A typical use is to compile a source file and run it on a physical device, without the use of the android emulator. 
 
-		<h2> Project Sections </h2>
+		<h3> Project Sections </h3>
 		The project is composed of three main directory :
 		<ul>
 			<li>
 				<b> Gen </b><br>
-				This folder containg Java Library automatically generated. <br>
+				This folder contains Java Library automatically generated. <br>
 				In particular, an "R.java" file, containing exadecimal values referreing to gui elements.
 			</li>
 			<li>
@@ -42,50 +41,51 @@
 			</li>
 			<li>
 				<b> Res </b><br>
-				This directory contains all the resource used by the application. <br>
-				Its subdirectory, "drawable", that should contain all the graphics resource such as image and so on. <br>
-				More important in here are the layouts. <br>
+				This directory contains all the resources used by the application. <br>
+				Its subdirectory, "drawable", contains all the graphics resource such as image and so on. <br>
+				The GUI Layout is defined in a xml file, contained in this directory.
 			</li>
 		</ul>
 
-		<h2> Activity </h2>
-		<table>
-			<tr>
-				<td width=50% class="content" > 
-					<h3> The concept </h3>
-					An activity is a single, focused thing that the user can do. <br>
-					Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
-					Every application is build around a single instance of the Activity class. <br>
-					All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
-					<b> How is that related to the DVM? </b> <br>
-					Every instance of the Activity class, ie for every application, correspond to a single instance of the Dalvik VM. <br>
-					An application event may call some DVM api ( such as close, open, ... ) and vice-versa.
-					<br>
-					<h3> Some Methods </h3>
-					<ul>
-						<li> 
-							<div class="strong"> 
-								onCreate(), onStart(), onResume(), onDestroy(), ...
-							</div>
-							As easy to understand, these are methods used to interact with the flow of the application lifecycle. <br>
-							Override these methods to initialize it on start or commmit modifications when exiting.
-						</li>
-						<br>
+		<h3> Activity </h3>
+		<div class="strong"> The concept </div>
+		An activity is a single, focused thing that the user can do. <br>
+		Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
+		Every application is build around a single instance of the Activity class. <br>
+		All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
+		<b> How is that related to the DVM? </b> <br>
+		Every instance of the Activity class, ie for every application, correspond to a single instance of the Dalvik VM. <br>
+		An application event may call DVM APIs ( such as close, open, ... ) and vice-versa. <br>
+		<br>
 
-						<li> <div class="strong"> setContentView() </div>
-							Set the activity content to an explicit view. <br>
-							This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. <br>
-							Parameters :
-							<ul>
-								<li> view: the desired content to display. </li>
-								<li> params: layout parameters for the view. </li>
-							</ul>
-						</li> 
-						<br>
+		<div class="strong"> Lifecycle Diagram </div>
+		<img src="../../res/imgs/activity_lifecycle.png" 
+			 alt="Activity Lifecycle"
+    	     width=75% > 
 
-						<li> <div class="strong"> onActivityResult() </div>
-							Let's suppose an application needs the user to select a contact from the contect list. <br>
-							Call an other application is as this : <br>
+		<div class="strong"> Some Methods </div>
+		<ul>
+			<li> 
+				<b>onCreate(), onStart(), onResume(), onDestroy(), ...</b>
+				As easy to understand, these are methods used to interact with the flow of the application lifecycle. <br>
+				Override these methods to initialize it on start or commmit modifications when exiting.
+			</li>
+			<br>
+			<li> 
+				<b> setContentView() </b>
+				Set the activity content to an explicit view. <br>
+				This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. <br>
+				Parameters :
+				<ul>
+					<li> view: the desired content to display. </li>
+					<li> params: layout parameters for the view. </li>
+				</ul>
+			</li> 
+			<br>
+			<li> 
+				<b> onActivityResult() </b>
+				Let's suppose an application needs the user to select a contact from the contect list. <br>
+				Calling another application is as simple as this : <br>
 <pre class="code">
 startActivityForResult(
     new Intent( Intent.ACTION_PICK,
@@ -94,21 +94,12 @@ startActivityForResult(
     PICK_CONTACT_REQUEST 
 );
 </pre>
-							Override onAcitvityResult() let you use the result of the called application, using and Intent object.
-						</li> 
-					</ul>
-				</td> 
-				<td width=50% > 
-					<img src="../../res/imgs/activity_lifecycle.png" 
-						 alt="Activity Lifecycle"
-		    		     width=100% > 
-				</td>
-			</tr>
-		</table>			
+				Override onAcitvityResult() let you use the result of the called application, by using an Intent object.
+			</li> 
+		</ul>			
 
-		<h2> Manifest </h2>
+		<h3> Manifest </h3>
 		In software packaging, it is common to list the contents of a distribution in a manifest file. <br>
-		This file simply enumerates the files which are included in the distribution. <br>
 		In java this kind of file is used to specify information used when packing in a jar file :
 		<ul>
 			<li> 
@@ -122,7 +113,7 @@ startActivityForResult(
 		The ability to start a particular Activity can be enforced when it is declared in its manifest's &ltactivity&gt tag. <br>
 		Other applications will need to declare a corresponding &ltuses-permission&gt element in their own manifest to be able to start that activity. <br>
 
-		<h2> Layout </h2>
+		<h3> Layout </h3>
 		A layout defines the visual structure for a user interface, such as the UI for an activity or app widget. You can declare a layout in two ways:
 		<ul>
 			<li> 

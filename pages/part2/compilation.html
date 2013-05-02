@@ -1,21 +1,19 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../../res/css/main.css">
-        <title> Compilation </title>
-        <h1> Compile an Application </h1>
+        <title> Packing Application </title>
+        <h1> Packing an Application </h1>
         <hr>
 		<br>
     </head> 
     
     <body>         
     
-		<h2> Introduction </h2>
-		Compile a programm means translate it from a language to an other. <br>
-		For example from C to x86 assembly, or from Java to Java Bytecode. <br>
-		When compiling an application of Android, our target-language is the Dalvik Bytecode.
-		I won't talk about the compilation itself between any language to Dalvik Bytecode, or from bytecode to ARM Assembly.
-
-		<h2> From any language to Dalvik Bytecode </h2>
+		<h3> Introduction </h3>
+		Compile a programm means translate it from a language to an othe ( e.g. C to x86 assembly, Java to Java Bytecode ). <br>
+		When compiling an application of Android, our target-language is the Dalvik Bytecode. <br>
+		
+		<h3> From any language to Dalvik Bytecode </h3>
 		<table>
 			<tr>
 				<td>				
@@ -59,16 +57,15 @@
 			</tr>
 		</table>
 
-		<h2> Building an APK file </h2>
+		<h3> Building an APK file </h3>
 		Application Package File (APK) is the file format used to distribute and install application on Android. <br>
-		Any program, to run on Android, needs to be packed in one .apk file. <br>
-		The apk files contains the application code, the dex file, and all the resource needed.<br>
-		APK files are ZIP file formatted packages based on the JAR file format, with .apk file extensions.<br>
-		The MIME type associated with APK files is application/vnd.android.package-archive. <br>
+		Any program, to run on Android, needs to be packed in an apk file. <br>
+		The apk files contains the application code, the dex file, and all the resources needed.<br>
+		Those information are stored in a special JAR file ( using ZIP ), with ".apk" as file extensions.<br>
 		The application can be compiled using the ADT plugin. <br>
-		After this, the apk needs to be signed, using Jarsigner, and the aligned, using Zipalign.
+		After this, the apk needs to be signed, using Jarsigner, and aligned, using Zipalign.
 
-		<h2> Runtime through the Dalvik Virtual Machine </h2>
+		<h3> Runtime through the Dalvik Virtual Machine </h3>
 		<table>
 			<tr>
 				<td width=50%>
@@ -84,14 +81,15 @@
 							Stack Section
 						</li>
 						<li>
-							BSS Section <br>
-							( Which is something derivated from Unix Compilers ).
-						</li>
-						<li>
 							Data Section
 						</li>
 						<li>
+							BSS Section <br>
+							( A special Part of the data segment, for statically-allocated variables. )
+						</li>
+						<li>
 							Text Section
+							( A special segment for strings treatment
 						</li>
 					</ul>
 				</td>
