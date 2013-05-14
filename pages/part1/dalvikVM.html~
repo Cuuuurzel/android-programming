@@ -92,14 +92,14 @@
 						</td>
 					</tr>
 				</table>
-				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ).
+				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ). <br>
 				Its use reduces by 30% fewer instructions, but 25% larger code size (bytes) compared to JVM.
 			</li>
 			<br>
 			<li>
 				<b> Constant Pool </b> <br>
 				The dx compiler significantly reduces the size of the costant pool, by inling them directly in the bytecode. <br>
-				This permits the use of one single costant pool, instead of many, as the JVM does. <br>
+				This permits the use of one single costant pool, unlike the JVM does. <br>
 			</li>
 			<br>
 			<li>

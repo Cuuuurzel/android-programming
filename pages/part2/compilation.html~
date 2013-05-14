@@ -10,52 +10,14 @@
     <body>         
     
 		<h3> Introduction </h3>
-		Compile a programm means translate it from a language to an othe ( e.g. C to x86 assembly, Java to Java Bytecode ). <br>
-		When compiling an application of Android, our target-language is the Dalvik Bytecode. <br>
+		"To compile" a programm means translate it in an other language ( e.g. C to x86 assembly, Java to Java Bytecode ). <br>
+		When compiling an application for Android, our target-language is the Dalvik Bytecode. <br>
+		The compiled program is stored in a file *.dex.
 		
-		<h3> From any language to Dalvik Bytecode </h3>
-		<table>
-			<tr>
-				<td>				
-					It can't be easier. <br>
-					
-					<h3>Structure of a DEX file</h3>
-					<ul>
-						<li>
-							<b>Header</b>
-						</li>
-						<li>
-							<b>Constant Pool</b>
-							<ul>
-								<li> References to other classes </li>
-								<li> Method names </li>
-								<li> Numerical constants </li>	
-							</ul>
-						</li>
-						<li>
-							<b>Classes definition</b>
-							<ul>
-								<li> Access flags </li>
-								<li> Class names </li>
-							</ul>
-						</li>
-						<li>
-							<b>Data</b>
-							<ul>
-								<li> Method code </li>
-								<li> Info related to methods </li>
-								<li> Variables </li>
-							</ul>
-						</li>
-					</ul>
-				</td>
-				<td width=40%>
-					<img src="../../res/imgs/dalvik_bytecode.png" 
-						 alt="Java to Dalvik Bytecode mapping"
-						 width=100% > 
-				</td>
-			</tr>
-		</table>
+		<h3>Structure of a DEX file</h3>
+		<img src="../../res/imgs/dalvik_bytecode.png" 
+			 alt="Java to Dalvik Bytecode mapping"
+			 width=100% > 
 
 		<h3> Building an APK file </h3>
 		Application Package File (APK) is the file format used to distribute and install application on Android. <br>
@@ -89,6 +51,7 @@
 						</li>
 						<li>
 							Text Section
+							( A special segment for strings treatment
 						</li>
 					</ul>
 				</td>

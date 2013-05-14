@@ -11,15 +11,12 @@
 		An OS offers a set of common APIs on every platform on which the system runs. <br>
 		That allows to run the same kind of executable file on different platform, or OS version. <br>
 		This is possible in a lot of ways, such as cross-compiling the source, or execute it on a Virtual Machine. <br>
-		In Android, users application are executed on the Dalvik Virtual Machine. 
+		In Android, users application are executed trough the Dalvik Virtual Machine. 
 
 		<h3> What does the DVM? </h3>
 		<ul>
 			<li>
 				Executes Dalvik Bytecode.
-			</li>
-			<li>
-				As there is no exceptions handling in Dalvik Bytecode, DVM handle them at runtime.						
 			</li>
 			<li>
 				Manages multiple instance of itself ( Like the JVM does. )
@@ -31,7 +28,7 @@
 				Abstracts the problem of memory menagement to the OS.
 			</li>
 		</ul>
-		<b> We can talk about the Dalvik VM as an "Application-Level" Scheduler. </b>
+		<b> Applications run on the DVM just like in a "sandbox". </b>
 
 		<h3> Make it efficient </h3>
 		<table>
@@ -73,7 +70,7 @@
 			</li>
 			<br>
 			<li>
-				<b> DVM uses the Dalvik Bytecode, and not, as many people may think, the Java one. </b> <br>
+				<b> DVM uses the Dalvik Bytecode instead of the Java one. </b> <br>
 				Which is far more pragmatic :
 				<table>
 					<tr>
@@ -107,7 +104,7 @@
 			</li>
 			<br>
 			<li>
-				<b> Null references </b>
+				<b> Null references </b> <br>
 				DVM does not specify a null type, the 0 value is used instead.
 			</li>
 			<br>

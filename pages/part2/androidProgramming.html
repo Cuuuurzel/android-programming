@@ -48,44 +48,42 @@
 		</ul>
 
 		<h3> Activity </h3>
-		<div class="strong"> The concept </div>
-		An activity is a single, focused thing that the user can do. <br>
-		Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
-		Every application is build around a single instance of the Activity class. <br>
-		All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
-		<b> How is that related to the DVM? </b> <br>
-		Every instance of the Activity class, ie for every application, correspond to a single instance of the Dalvik VM. <br>
-		An application event may call DVM APIs ( such as close, open, ... ) and vice-versa. <br>
-		<br>
+		<table>
+			<tr>
+				<td>
+					<div class="strong"> The concept </div>
+					An activity is a single, focused thing that the user can do. <br>
+					Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
+					Every application is build around a single instance of the Activity class. <br>
+					All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
+					<b> How is that related to the DVM? </b> <br>
+					Every instance of the Activity class, ie for every application, correspond to a single instance of the Dalvik VM. <br>
+					An application event may call DVM APIs ( such as close, open, ... ) and vice-versa. <br>
+					<br>
 
-		<div class="strong"> Lifecycle Diagram </div>
-		<img src="../../res/imgs/activity_lifecycle.png" 
-			 alt="Activity Lifecycle"
-    	     width=75% > 
-
-		<div class="strong"> Some Methods </div>
-		<ul>
-			<li> 
-				<b>onCreate(), onStart(), onResume(), onDestroy(), ...</b>
-				As easy to understand, these are methods used to interact with the flow of the application lifecycle. <br>
-				Override these methods to initialize it on start or commmit modifications when exiting.
-			</li>
-			<br>
-			<li> 
-				<b> setContentView() </b>
-				Set the activity content to an explicit view. <br>
-				This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. <br>
-				Parameters :
-				<ul>
-					<li> view: the desired content to display. </li>
-					<li> params: layout parameters for the view. </li>
-				</ul>
-			</li> 
-			<br>
-			<li> 
-				<b> onActivityResult() </b>
-				Let's suppose an application needs the user to select a contact from the contect list. <br>
-				Calling another application is as simple as this : <br>
+					<div class="strong"> Some Methods </div>
+					<ul>
+						<li> 
+							<b>onCreate(), onStart(), onResume(), onDestroy(), ...</b> <br>
+							As easy to understand, these are methods used to interact with the flow of the application lifecycle. <br>
+							Override these methods to initialize it on start or commmit modifications when exiting.
+						</li>
+						<br>
+						<li> 
+							<b> setContentView() </b>
+							Set the activity content to an explicit view. <br>
+							This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. <br>
+							Parameters :
+							<ul>
+								<li> view: the desired content to display. </li>
+								<li> params: layout parameters for the view. </li>
+							</ul>
+						</li> 
+						<br>
+						<li> 
+							<b> onActivityResult() </b>
+							Let's suppose an application needs the user to select a contact from the contect list. <br>
+							Calling another application is as simple as this : <br>
 <pre class="code">
 startActivityForResult(
     new Intent( Intent.ACTION_PICK,
@@ -94,9 +92,18 @@ startActivityForResult(
     PICK_CONTACT_REQUEST 
 );
 </pre>
-				Override onAcitvityResult() let you use the result of the called application, by using an Intent object.
-			</li> 
-		</ul>			
+						Override onAcitvityResult() let you use the result of the called application, by using an Intent object.
+					</li> 
+				</ul>		
+				</td>
+				<td width=50%>
+					<div class="strong"> Lifecycle Diagram </div>
+					<img src="../../res/imgs/activity_lifecycle.png" 
+						 alt="Activity Lifecycle"
+						 width=100% > 
+				</td>
+			</tr>
+		</table>	
 
 		<h3> Manifest </h3>
 		In software packaging, it is common to list the contents of a distribution in a manifest file. <br>
