@@ -9,10 +9,7 @@
     <body>
 		<ul>
 			<li>
-				<a href="javaAndArm.html">Java and ARM</a>
-			</li>
-			<li>
-				<a href="javaSampleCode.html">A more complex example - Java</a>
+				<a href="javaAndArm.html"> <h2>Java and ARM</h2> </a>
 			</li>
 		</ul>
 	</body>

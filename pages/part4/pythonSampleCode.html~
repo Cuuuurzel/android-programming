@@ -42,6 +42,9 @@ class SimpleCalcApp( App ) :
 
     def on_pause( self ) : 
          return True
+
+if __name__ in [ "__android__", "__main__" ] :
+    SimpleCalcApp().run()
 </pre>
 
 		<h3> Screenshots </h3>
@@ -54,7 +57,12 @@ class SimpleCalcApp( App ) :
 		<img src="../../res/SimpleCalc/screenshots/python3.png" 
 			 alt="A screenshot of the result."
   		     width=30% > 
-
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br>
 		<h3>And here are the missing functions </h3>
 <pre class="code">
 #Build a set of bottons and add them to the given layout.

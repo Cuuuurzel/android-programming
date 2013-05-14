@@ -47,20 +47,16 @@
 			</li>
 		</ul>
 
-		<h3> Activity </h3>
 		<table>
 			<tr>
 				<td>
+					<h3> Activity </h3>
 					<div class="strong"> The concept </div>
 					An activity is a single, focused thing that the user can do. <br>
 					Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
 					Every application is build around a single instance of the Activity class. <br>
 					All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
-					<b> How is that related to the DVM? </b> <br>
-					Every instance of the Activity class, ie for every application, correspond to a single instance of the Dalvik VM. <br>
-					An application event may call DVM APIs ( such as close, open, ... ) and vice-versa. <br>
-					<br>
-
+					
 					<div class="strong"> Some Methods </div>
 					<ul>
 						<li> 
@@ -96,12 +92,11 @@ startActivityForResult(
 					</li> 
 				</ul>		
 				</td>
-				<td>
-
+				<td width=50%>
 					<div class="strong"> Lifecycle Diagram </div>
 					<img src="../../res/imgs/activity_lifecycle.png" 
 						 alt="Activity Lifecycle"
-						 width=75% > 
+						 width=95% > 
 				</td>
 			</tr>
 		</table>	
