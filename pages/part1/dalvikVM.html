@@ -11,27 +11,23 @@
 		An OS offers a set of common APIs on every platform on which the system runs. <br>
 		That allows to run the same kind of executable file on different platform, or OS version. <br>
 		This is possible in a lot of ways, such as cross-compiling the source, or execute it on a Virtual Machine. <br>
-		In Android, users application are executed on the Dalvik Virtual Machine. 
+		In Android, users application are executed trough the Dalvik Virtual Machine. 
 
 		<h3> What does the DVM? </h3>
 		<ul>
 			<li>
-				Executes Dalvik Bytecode.
+				Executes <b>Dalvik Bytecode</b>.
 			</li>
 			<li>
-				As there is no exceptions handling in Dalvik Bytecode, DVM handle them at runtime.						
+				Manages <b>multiple instance</b> of itself ( Like the JVM does. )
 			</li>
 			<li>
-				Manages multiple instance of itself ( Like the JVM does. )
+				Abstracts the problem of <b>memory menagement</b> to the OS.
 			</li>
 			<li>
-				Provides a "sandbox" where applications can run *without* interact each other.
-			</li>
-			<li>
-				Abstracts the problem of memory menagement to the OS.
+				Provides a <b>sandbox</b> where applications can run *without* interact each other.
 			</li>
 		</ul>
-		<b> We can talk about the Dalvik VM as an "Application-Level" Scheduler. </b>
 
 		<h3> Make it efficient </h3>
 		<table>
@@ -42,23 +38,25 @@
 						 width=100% >
 				</td>
 				<td>
-					As mentioned, every application runs on a single instance of the Dalvik Virtual Machine. <br>
+					Every Android application runs on a single instance of the Dalvik Virtual Machine. <br>
 					Zygote is the process that make the creation of new DVM instace efficient.
 					<ol>
 						<li> 
 							The Boot-loader loads the kernel and start init process.
 						</li>
 						<li> 
-							Starts Zygote process.
+							Zygote process starts
 						</li>
 						<li> 
-							Initializes a Dalvik VM which preloads and pre-initializes core library classes.
+							Zygote creates a new instance of the DVM <br>
+							( Also preloads and pre-initializes core library classes. )
 						</li>
 						<li> 
 							The system keeps in an idle state the process until the execution request.
 						</li>
 						<li> 
-							Once an application execution request occurs, Zygote forks itself and create new process with the pre-loaded Dalvik VM.
+							Once an application execution request occurs, <br>
+							Zygote forks itself and create new process with the pre-loaded Dalvik VM.
 						</li>
 					</ol>
 				</td>
@@ -73,7 +71,7 @@
 			</li>
 			<br>
 			<li>
-				<b> DVM uses the Dalvik Bytecode, and not, as many people may think, the Java one. </b> <br>
+				<b> DVM uses the Dalvik Bytecode instead of the Java one. </b> <br>
 				Which is far more pragmatic :
 				<table>
 					<tr>
@@ -93,7 +91,7 @@
 					</tr>
 				</table>
 				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ). <br>
-				Its use reduces by 30% fewer instructions, but 25% larger code size (bytes) compared to JVM.
+				Its use reduces by 30% the number of instructions, but increase the code size by a 25%.				
 			</li>
 			<br>
 			<li>
@@ -107,7 +105,7 @@
 			</li>
 			<br>
 			<li>
-				<b> Null references </b>
+				<b> Null references </b> <br>
 				DVM does not specify a null type, the 0 value is used instead.
 			</li>
 			<br>
