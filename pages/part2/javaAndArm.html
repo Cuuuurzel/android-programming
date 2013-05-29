@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+		<title> Java and ARM </title>
+		<h1>Java and ARM</h1>
+		<hr>
+	</head> 
+	
+	<body>
+		Java, over time, has become one of the most widely used programming languages. <br>
+		J2ME is a runtime and a collection of APIs for software development dedicated to devices with limited resources. <br>
+		The portability of Java, and all the advantages of J2ME, had led Java soon to become a de-facto development standart for mobile devices. <br>
+		<br>		
+		On the other side, the main problem of ARM architecture is the limited computational power. <br>			
+		A solution that has been found was to make cpu natively execute Java Bytecode. <br>		   
+		The following is an overview about technologies used in ARM Architectures to treat instructions. <br>  
+		<br>
+		<b>The main point is that there is no more a "special way" to execute Java in ARM CPUs.</b>
+		<br>
+		
+		<h3> Jazelle </h3>
+		Jazelle DBX (Direct Bytecode eXecution) allows some ARM processors to natively execute Java bytecode. <br>
+		The target of this tecnology is to facilitate the execution on Java ME programs on mobile devices. <br>
+		The BXJ ( Branch and eXchange to Java ) instruction attempts to switch to Jazelle state. <br>
+		If allowed and successful, sets the 'J' bit in the CPSR; otherwise, it "falls through" and acts as a standard BX (Branch) instruction. <br>
+
+		<h3> Thumb </h3>
+		To improve compiled code-density since 1994 arm processors have featured Thumb instruction set, which have their own state. <br> 
+		When in this state, the processor executes the Thumb instruction set, a compact 16-bit encoding for a subset of the ARM instruction set. <br>
+		Most of the Thumb instructions are directly mapped to normal ARM instructions. <br> 
+
+		<h3> Thumb2 </h3>
+		Both ARM and Thumb instructions sets were exdended. <br> 
+		A stated aim for Thumb-2 was to achieve code density similar to Thumb with performance similar to the ARM instruction set on 32-bit memory. <br>
+		As you can see below, the same source code can so be compiled as ARM or Thumb2 code. <br>
+		Recall that the Thumb MOV instruction has no bits to encode "EQ" or "NE", as MOVEQ and MOVNE are ARM instruction.
+		<table>
+			<tr>
+				<td width=25%><b> code </div></td>
+				<td width=25%><b> pseudo-code </div></td>
+				<td width=25%><b> ARM meaning </div></td>
+				<td width=25%><b> Thumb2 meaning </div></td>
+			</tr>
+			<tr>
+				<td><pre class="code"> CMP r0, r1 </pre></td>
+				<td> -- </td>
+				<td> comparison </td>
+				<td> comparison </td>
+			</tr>
+			<tr>
+				<td><pre class="code"> ITE EQ </pre></td>
+				<td> if r0 == r1 </td>
+				<td> -- </td>
+				<td> starts an If-Then-Else block </td>
+			</tr>
+			<tr>
+				<td><pre class="code"> MOVEQ r0, r2 </pre></td>
+				<td> then r0 = r2 </td>
+				<td> conditional </td>
+				<td> "Then" block </td>
+			</tr>
+			<tr>
+				<td><pre class="code"> MOVNE r0, r3 </pre></td>
+				<td> else r0 = r3 </td>
+				<td> conditional </td>
+				<td> "Else" block </td>
+			</tr>
+		</table> 
+
+		<h3> ThumbEE </h3>
+		ThumbEE, also known as Jazelle RCT (Runtime Compilation Target), was announced in 2005. <br> 
+		It added a fourth processor mode, and made small changes to the Thumb-2 extended Thumb instruction set. <br>
+		These changes make JIT compilers able to output smaller compiled code without impacting performance. <br>
+		ThumbEE is a target for languages such as Java, C#, Perl, and Python, which all uses JIT compilers. <br> 
+
+		<h3> AArch64e </h3>		
+		AArch64 is a 64-bit architecture, main news are : <br>
+		<ul>
+			<li>
+				New instruction set, A64
+				<ul>
+					<li> 31 general-purpose 64-bit registers </li>
+					<li> Instructions are still 32 bits long and mostly the same as A32 </li>
+					<li> Most instructions can take 32-bit or 64-bit arguments </li>
+					<li> Addresses assumed to be 64-bit </li>
+				</ul>
+			</li>
+			<li>
+				Advanced SIMD (NEON) enhanced
+				<ul>
+					<li> Has 32x128-bit registers (up from 16), also accessible via VFPv4 </li>
+					<li> Supports double-precision floating point </li>
+					<li> Fully IEEE 754 compliant </li>
+					<li> AES encrypt/decrypt and SHA-1/SHA-2 hashing instructions also use these registers </li>
+				</ul>
+			</li>
+			<li>
+				A new exception system
+				<ul>
+					<li> Fewer banked registers and modes </li>
+				</ul>
+			</li>
+		</ul>
+
+		<h3> Kernel Linux 3.7 included pathes to support AArch64e. </h3>
+	</body>
+</html>

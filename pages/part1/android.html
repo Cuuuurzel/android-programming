@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../../res/css/main.css">
+		<title> Android </title>
+		<h1>Introduction to Android</h1>
+		<hr>
+	</head> 
+	
+	<body>
+		<h3>Introduction</h3>
+		Android is a Linux-Based OS which target-platform are mobile devices. <br>
+		Nowaday, over the 60% of smartphones in the world are running Android. <br>
+		It is Open Source, it has a good SDK, and it is Linux, this made developers quickly start to love Android. <br>
+		Android is under ongoing development by Google, which also provides the Android SDK. <br>
+		Each Android version corresponds to a specific API "level", more API levels are compatible each other.		
+
+	   	<h3>Life, Death and Miracles</h3>
+		<table width=100% border=1>
+			<tr>
+				<td width=20%><b>When</b></td>
+				<td width=80%><b>What</b></td>
+			</tr>
+			<tr>
+				<td>2003</td>
+				<td>Android development starts.</td>
+			</tr>
+			<tr>
+				<td>2005</td>
+				<td>Google buys Android Inc..</td>
+			</tr>
+			<tr>
+				<td>oct 2008</td>
+				<td>HTC Dream is the first Android phone to be commerced.</td>
+			</tr>
+			<tr>
+				<td>apr 2009</td>
+				<td>Android 1.5 "Cupcake" released, based on Kernel Linux 2.6.</td>
+			</tr>
+			<tr>
+				<td>oct 2011</td>
+				<td>Android 4.0 "Ice Cream Sandwich" released, based on Kernel Linux 3.0.</td>
+			</tr>
+			<tr>
+				<td>q1 2012</td>
+				<td>More than 800.000 Apps on the Play Store.</td>
+			</tr>
+			<tr>
+				<td>q3 2012</td>
+				<td>1.5 Million new device activation per day.</td>
+			</tr>
+			<tr>
+				<td>q2 2013</td>
+				<td>Over 900 Million total activation.</td>
+			</tr>
+		</table>
+	
+		<h3>Internal Structure</h3>
+		<table>
+			<tr>
+				<td width=40%>
+					<img src="../../res/imgs/android_architecture.png" 
+						 alt="Android Architecture"
+						 width=100% >	   
+					</td>
+				<td width=60%>
+					<table>
+						<tr>								
+							<td>
+								<h4> Linux Kernel </h4> 
+								Provides basic functionality to the upper levels :
+								<ul class="small">
+									<li> Hardware Abstraction Layer </li>
+									<li> C\C++ APIs. </li>
+									<li> GCC. </li>
+									<li> Memory Manager </li>
+									<li> Scheduler </li>
+								</ul>
+							</td>
+							<td>
+								<h4> Android Runtime </h4>
+								Consist of core C\C++\Java libraries used by the DVM.
+								<ul class="small">
+									<li> LibC </li>
+									<li> OpenGL ES </li>
+									<li> Webkit </li>
+									<li> SQLite </li>
+									<li> ... </li>
+								</ul>									
+							</td>
+						</tr>
+						<tr>
+							<td>	
+								<h4>Dalvik Virtual Machine</h4>
+								See the following charapter for this.
+							</td>
+							<td>	
+								<h4> Application Framework </h4> 
+								<ul>
+									<li>Development libraries</li>
+									<li>Sdk Interface</li>
+									<li>Windows Provider</li>
+									<li>Package Manager</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+<html>
