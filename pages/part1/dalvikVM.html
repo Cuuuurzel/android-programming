@@ -8,34 +8,30 @@
 	
 	<body>
 		<h3> Introduction </h3>
-		An OS offers a set of common APIs on every platform on which the system runs. <br>
-		That allows to run the same kind of executable file on different platform, or OS version. <br>
+		An OS offers a set of common APIs on every machine on which the system runs. <br>
+		That allows to run the same kind of executable file on different platforms, or OS version. <br>
 		This is possible in a lot of ways, such as cross-compiling the source, or execute it on a Virtual Machine. <br>
 		In Android, users application are executed trough the Dalvik Virtual Machine. 
 
-		<h3> What does the DVM? </h3>
+		<h3> Which are its functions? </h3>
 		<ul>
 			<li>
 				Executes <b>Dalvik Bytecode</b>.
 			</li>
 			<li>
-<<<<<<< HEAD
 				Manages <b>multiple instance</b> of itself ( Like the JVM does. )
 			</li>
 			<li>
 				Abstracts the problem of <b>memory menagement</b> to the OS.
-=======
+			</li>
+			<li>
 				Manages multiple instance of itself ( Like the JVM does. )
->>>>>>> 85447459cce3dcdb9b4f7412bda414e2f3bce2aa
 			</li>
 			<li>
 				Provides a <b>sandbox</b> where applications can run *without* interact each other.
 			</li>
 		</ul>
-<<<<<<< HEAD
-=======
 		<b> Applications run on the DVM just like in a "sandbox". </b>
->>>>>>> 85447459cce3dcdb9b4f7412bda414e2f3bce2aa
 
 		<h3> Make it efficient </h3>
 		<table>
@@ -98,8 +94,10 @@
 						</td>
 					</tr>
 				</table>
-				The DVM instruction set has 218 opcodes ( JVM: 200 opcodes ). <br>
-				Its use reduces by 30% the number of instructions, but increase the code size by a 25%.				
+				The DVM instructions set has 218 opcodes. <br>
+				Compared to the JVM ( which uses 200 opcodes ) :
+				<li> 30% less instructions.</li>
+				<li> 25% more code size.</li>
 			</li>
 			<br>
 			<li>

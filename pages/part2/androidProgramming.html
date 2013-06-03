@@ -11,7 +11,7 @@
 		The Android software development kit (SDK) includes a comprehensive set of development tools.<br>
 		These include libraries, documentation, sample code, and tutorials.<br>
 		The SDK also contains a Debugger Tool ( ADB ) and an Android emulator for x86 systems. <br>
-		Obvioulsly, there also are tools for packing application, as explained in the next charapter.<br>
+		Obvioulsly, there also are tools for packing application, as explained in the next chapter.<br>
 
 		<h3> Android NDK </h3>
 		The NDK is a toolset that allows you to implement parts of your app using native-code languages such as C and C++. <br>
@@ -28,7 +28,7 @@
 		I has been create to maintain the same interface of different OS and to keep togheter all the mentioned softwares. <br>
 		
 		<h3> Project Sections </h3>
-		The project folder contains three main directory :
+		The project folder contains three main directories :
 		<ul>
 			<li>
 				<b>Gen</b>,<br>
@@ -43,7 +43,7 @@
 			<li>
 				<b>Res</b>,<br>
 				which contains all the resources used by the application. <br>
-				Its subdirectory, "drawable", contains all the graphics resource such as image and so on. <br>
+				Its subdirectory, "drawable", contains all the graphic resource such as image and so on. <br>
 				The GUI Layout is defined in a xml file, contained in this directory.
 			</li>
 		</ul>
@@ -56,22 +56,18 @@
 					An activity is a single, focused thing that the user can do. <br>
 					Almost all activities interact with the user, so the Activity class takes care of managing graphics resources. <br>
 					Every application is build around a single instance of the Activity class. <br>
-<<<<<<< HEAD
-					All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br><br>
-=======
-					All the activity classes must have a corresponding <activity> tag in their package's manifest file. <br>
->>>>>>> 85447459cce3dcdb9b4f7412bda414e2f3bce2aa
-					
+					All the activity classes must have a corresponding &ltactivity&gt tag in their package manifest file. <br><br>
+					An application might contains more activities, all these run on a single instance of the DVM. <br>
+
 					<div class="strong"> Some Methods </div>
 					<ul>
 						<li> 
 							<b>onCreate(), onStart(), onResume(), onDestroy(), ...</b> <br>
 							As easy to understand, these are methods used to interact with the flow of the application lifecycle. <br>
-							Override these methods to initialize it on start or commmit modifications when exiting.
+							Override these methods to initialize it on start or modifing it when exiting.
 						</li>
 						<br>
 						<li> 
-<<<<<<< HEAD
 							<b> setContentView() </b> <br>
 							Set the activity content to an explicit view. <br>
 							This view is placed directly into the activity's view hierarchy. <br>
@@ -79,21 +75,7 @@
 						</li> 
 						<br>
 						<li> 
-							<b> onActivityResult() </b> <br>
-=======
-							<b> setContentView() </b>
-							Set the activity content to an explicit view. <br>
-							This view is placed directly into the activity's view hierarchy. It can itself be a complex view hierarchy. <br>
-							Parameters :
-							<ul>
-								<li> view: the desired content to display. </li>
-								<li> params: layout parameters for the view. </li>
-							</ul>
-						</li> 
-						<br>
-						<li> 
 							<b> onActivityResult() </b>
->>>>>>> 85447459cce3dcdb9b4f7412bda414e2f3bce2aa
 							Let's suppose an application needs the user to select a contact from the contect list. <br>
 							Calling another application is as simple as this : <br>
 <pre class="code">
@@ -104,7 +86,7 @@ startActivityForResult(
     PICK_CONTACT_REQUEST 
 );
 </pre>
-						Override onAcitvityResult() let you use the result of the called application, by using an Intent object.
+						Override onAcitvityResult() let you use the result of the requested application, by using an Intent object.
 					</li> 
 				</ul>		
 				</td>
@@ -123,7 +105,7 @@ startActivityForResult(
 		<ul>
 			<li> 
 				store hashes of stored files for signature validation. <br>
-				This aspect will be deepened in the next charapter, "Packing Applications". 
+				This aspect will be deepened in the next chapter, "Packing Applications". 
 			</li>
 			<li> sealing jar files (i.e. ensure that only classes from this jar file are loaded in the packages defined in this jar file). </li>
 			<li> store version/product/producer information to be readable at runtime </li>
@@ -133,7 +115,8 @@ startActivityForResult(
 		Other applications will need to declare a corresponding &ltuses-permission&gt element in their own manifest to be able to start that activity. <br>
 
 		<h3> Layout </h3>
-		A layout defines the visual structure for a user interface, such as the UI for an activity or app widget. You can declare a layout in two ways:
+		A layout defines the visual structure for a user interface, such as the UI for an activity or app widget. <br>
+		You can declare a layout in two ways:
 		<ul>
 			<li> 
 				Declare UI elements in XML. <br>
